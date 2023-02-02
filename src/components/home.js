@@ -2,6 +2,8 @@ import React from "react";
 import Home_Photo from '../img/home_photo.jpg';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import PropTypes from "prop-types";
+import Welcome from '../video/welcome.mp4'
 
 const Home = () => {
 
@@ -33,8 +35,7 @@ const Home = () => {
                 </div>
                 {!isOpenDev && !isOpenTech ? (
                     <div className="home-default-content">
-                        <div>VIDEO GOES HERE</div>
-                        {/* <video>VIDEO WILL GO HERE</video> */}
+                        <video src={Welcome} autoPlay="true" controls="controls" width="100%"/>
                     </div>
                 ) : null}
                 {isOpenDev ? (
