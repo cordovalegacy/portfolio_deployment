@@ -2,8 +2,6 @@ import React from "react";
 import Home_Photo from '../img/home_photo.jpg';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import PropTypes from "prop-types";
-import Welcome from '../video/welcome.mp4'
 
 const Home = () => {
 
@@ -35,7 +33,14 @@ const Home = () => {
                 </div>
                 {!isOpenDev && !isOpenTech ? (
                     <div className="home-default-content">
-                        <video src={Welcome} autoPlay="true" controls="controls" width="100%"/>
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src='https://www.youtube.com/embed/WfXNiijC9yE'
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            title="Embedded youtube">
+                        </iframe>
                     </div>
                 ) : null}
                 {isOpenDev ? (
